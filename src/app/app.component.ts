@@ -64,9 +64,9 @@ export class AppComponent  {
           this.state = 'right';
         }
       }
-    } else {
+    } else 
       this.state = 'axe';
-    }
+    
 
   }
 
