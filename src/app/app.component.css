@@ -1,3 +1,6 @@
-p {
-  font-family: Lato;
+.disabled {
+  background-color: gray;
+}
+.enabled {
+  background-color: blue;
 }

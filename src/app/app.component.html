@@ -1,4 +1,14 @@
 <hello name="{{ name }}"></hello>
-<p>
-  Start editing to see some magic happen :)
-</p>
+<section style="
+display: flex;
+justify-content: center; ">
+  <form [formGroup]="myForm" style="
+    display: flex; flex-direction: column; justify-content: center;     align-items: center;">
+      <input type="text" placeholder="to do" formControlName="toDo">
+    <button type="submit" class="button" style="width: 80px; margin-top:20px; "
+         [ngClass]="myForm.get('toDo').hasError('minlength') || myForm.get('toDo').hasError('required') ? 'disabled' : 'enabled'"
+         [@openClose]="state"
+         (mouseover)="toggle($event)"
+    >Submit</button>
+  </form>
+</section>
